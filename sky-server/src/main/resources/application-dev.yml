@@ -1,0 +1,14 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: root
+    password: 20040922xby
+
+  alioss:
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5tPxUWWpV4CitqVtAskC
+    access-key-secret: AIbqbdnfEqViqoV5GFKNfpoWHuEgCk
+    bucket-name: skt-shangli
