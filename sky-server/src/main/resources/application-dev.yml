@@ -11,6 +11,9 @@ sky:
     port: 6379
     password: 123456
     database: 0
+  wechat:
+    appid: wx3783b312bdc0c0c7
+    secret: 9e08be179fe375e7cfa5f9ef05bfc242
 
   alioss:
     endpoint: oss-cn-hangzhou.aliyuncs.com

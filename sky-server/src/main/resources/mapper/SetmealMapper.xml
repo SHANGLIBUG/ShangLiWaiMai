@@ -46,4 +46,33 @@
         </where>
         order by s.create_time desc
     </select>
+    <select id="list" parameterType="Setmeal" resultType="Setmeal">
+        select * from setmeal
+        <where>
+            <if test="name != null">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+    <select id="getByIdWithDish" parameterType="Long"  resultType="com.sky.vo.SetmealVO">
+        select a.*,
+               b.id    sd_id,
+               b.setmeal_id,
+               b.dish_id,
+               b.name   sd_name,
+               b.price  sd_price,
+               b.copies
+        from setmeal a
+                left join
+            setmeal_dish b
+            on
+                a.id = b.setmeal_id
+        where a.id = #{id}
+    </select>
 </mapper>
