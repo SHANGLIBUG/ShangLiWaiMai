@@ -19,7 +19,7 @@ import java.util.List;
 
 
 @RestController("userSetmealController")
-@RequestMapping("user/setmeal")
+@RequestMapping("/user/setmeal")
 @Api(tags = "C端-套餐浏览接口")
 @Slf4j
 public class SetmealController {
@@ -33,7 +33,7 @@ public class SetmealController {
      */
     @GetMapping("/list")
     @ApiOperation("根据分类查询id")
-//    @Cacheable(cacheNames = "setmeal",key = "#categoryId") //setmeal::10
+    @Cacheable(cacheNames = "setmeal",key = "#categoryId") //setmeal::10
     public Result<List<Setmeal>>list(Long categoryId){
         Setmeal setmeal=new Setmeal();
         setmeal.setCategoryId(categoryId);
@@ -50,6 +50,7 @@ public class SetmealController {
      */
     @GetMapping("/dish/{id}")
     @ApiOperation("根据套餐id查询包含的菜品列表")
+
     public Result<List<DishItemVO>> dishList(@PathVariable("id") Long id){
         List<DishItemVO> list =setmealService.getDishItemById(id);
         return Result.success(list);
