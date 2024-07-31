@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 @Slf4j
-public class RedisConfigurtion {
+public class RedisConfiguration {
 
     @Bean
     public RedisTemplate redisTemplate(RedisConnectionFactory redisConnectionFactory){
