@@ -1,7 +1,6 @@
 package com.sky.websocket;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
