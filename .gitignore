@@ -3,6 +3,7 @@
 *.iml
 *.class
 *Test.java
+**/*/application-dev.yml
 
 **/test/### Example user template template
 ### Example user template
@@ -12,4 +13,3 @@
 *.iml
 out
 gen
-application-dev.yml
